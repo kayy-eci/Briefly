@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/pages/loginPage.dart';
+import 'package:project1/pages/registerPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,7 +54,7 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
       ),
-      home: const Loginpage(),
+      home: const Registerpage(),
     );
   }
 }
