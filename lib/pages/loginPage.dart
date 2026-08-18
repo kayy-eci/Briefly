@@ -11,6 +11,7 @@ class Loginpage extends StatefulWidget {
 }
 
 class _LoginpageState extends State<Loginpage> {
+  final usernamecontroller = TextEditingController();
   bool hidePw = true;
   bool rememberMe= false;
 
@@ -55,6 +56,7 @@ class _LoginpageState extends State<Loginpage> {
               const SizedBox(height: 36),
               // Username
               TextField(
+                controller: usernamecontroller,
                 keyboardType: TextInputType.text,
                 decoration: const InputDecoration(
                   labelText: "Username",
@@ -125,7 +127,7 @@ class _LoginpageState extends State<Loginpage> {
               // Sign In Button
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homepage(nama: "kayysan", umur: 17))
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homepage(nama: usernamecontroller.text, umur: 17))
                   );
                 },
                 child: const Text("Sign In"),
