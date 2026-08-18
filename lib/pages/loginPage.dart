@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/pages/registerPage.dart';
 
 class Loginpage extends StatefulWidget {
   const Loginpage({super.key});
@@ -133,7 +134,9 @@ class _LoginpageState extends State<Loginpage> {
                     style: TextStyle(color: Colors.grey.shade500),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                       minimumSize: Size.zero,
