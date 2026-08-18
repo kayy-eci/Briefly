@@ -10,6 +10,9 @@ class Homepage extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
         children: [
           Text("Home Page"),
           Text("Kayysan"),
