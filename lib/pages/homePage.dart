@@ -14,9 +14,9 @@ class Homepage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Text("Home Page"),
-          Text("Kayysan"),
-          Text("Aeri"),
+          Text("Nama saya Kayysan"),
+          Text("Umur saya 17 tahun"),
+          Text("Aeri uchinaga is my bini"),
         ],
       ),
     )
