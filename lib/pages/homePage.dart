@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  
+  final String nama;
+  final int umur;
+
+  const Homepage({super.key, required this.nama, required this.umur});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +18,8 @@ class Homepage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Text("Nama saya Kayysan"),
-          Text("Umur saya 17 tahun"),
+          Text("Nama saya $nama"),
+          Text("Umur saya $umur tahun"),
           Text("Aeri uchinaga is my bini"),
         ],
       ),

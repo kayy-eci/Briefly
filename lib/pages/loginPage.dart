@@ -3,6 +3,7 @@ import 'package:project1/pages/homePage.dart';
 import 'package:project1/pages/registerPage.dart';
 
 class Loginpage extends StatefulWidget {
+
   const Loginpage({super.key});
 
   @override
@@ -124,7 +125,7 @@ class _LoginpageState extends State<Loginpage> {
               // Sign In Button
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homepage())
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homepage(nama: "kayysan", umur: 17))
                   );
                 },
                 child: const Text("Sign In"),
