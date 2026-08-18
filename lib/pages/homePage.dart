@@ -19,6 +19,6 @@ class Homepage extends StatelessWidget {
           Text("Aeri uchinaga is my bini"),
         ],
       ),
-    )
+    );
   }
 }
