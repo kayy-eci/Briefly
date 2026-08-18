@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:project1/pages/homePage.dart';
 import 'package:project1/pages/loginPage.dart';
+import 'package:project1/pages/newsPage.dart';
+import 'package:project1/pages/notificationPage.dart';
+import 'package:project1/pages/profilePage.dart';
 import 'package:project1/pages/registerPage.dart';
+import 'package:project1/pages/searchPage.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,7 +54,54 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
       ),
-      home: const Registerpage(),
+      routes: {
+        "/login": (context) => Loginpage(),
+        "/register": (context) => Registerpage(),
+        "/main": (context) => const MainNavigation(),
+      },
+      initialRoute: "/register",
+    );
+  }
+}
+
+class MainNavigation extends StatefulWidget {
+  const MainNavigation({super.key});
+
+  @override
+  State<MainNavigation> createState() => _MainNavigationState();
+}
+
+class _MainNavigationState extends State<MainNavigation> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = const [
+    Homepage(),
+    NewsPage(),
+    SearchPage(),
+    NotificationPage(),
+    ProfilePage(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.article), label: "News"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: "Notif"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+        ],
+      ),
     );
   }
 }

@@ -145,8 +145,7 @@ class _RegisterpageState extends State<Registerpage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Loginpage()),
-                      );
+                      Navigator.pushNamed(context, "/login");
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,

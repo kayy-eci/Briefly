@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project1/pages/homePage.dart';
 import 'package:project1/pages/registerPage.dart';
 
 class Loginpage extends StatefulWidget {
@@ -127,8 +126,7 @@ class _LoginpageState extends State<Loginpage> {
               // Sign In Button
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homepage(nama: usernamecontroller.text, umur: 17))
-                  );
+                  Navigator.pushReplacementNamed(context, "/main");
                 },
                 child: const Text("Sign In"),
               ),
@@ -143,7 +141,7 @@ class _LoginpageState extends State<Loginpage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.pushReplacementNamed(context, "/register");
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
