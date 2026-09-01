@@ -11,7 +11,9 @@ class Homepage extends StatelessWidget {
       body:  Center(
         child: Column(
           children: [
-            Image.asset("assets/images/ChessGame.png")
+            Image.asset("assets/images/ChessGame.png"),
+            Image.asset("assets/images/NaturaDrops.png"),
+            Image.asset("assets/images/Rebites.png")
           ],
           )
       ),
