@@ -8,8 +8,12 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Home")),
       backgroundColor: Colors.blue[50],
-      body: const Center(
-        child: Text("Halaman Home"),
+      body:  Center(
+        child: Column(
+          children: [
+            Image.asset("assets/images/ChessGame.png")
+          ],
+          )
       ),
     );
   }
