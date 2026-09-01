@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
-import 'package:project1/features/home/presentation/screens/homePage.dart';
-import 'package:project1/features/auth/presentation/screens/loginPage.dart';
-import 'package:project1/features/news/presentation/screens/newsPage.dart';
-import 'package:project1/features/notification/presentation/screens/notificationPage.dart';
-import 'package:project1/features/profile/presentation/screens/profilePage.dart';
-import 'package:project1/features/auth/presentation/screens/registerPage.dart';
-import 'package:project1/features/search/presentation/screens/searchPage.dart';
+import 'package:project1/features/home/presentation/screens/home_page.dart';
+import 'package:project1/features/auth/presentation/screens/login_page.dart';
+import 'package:project1/features/news/presentation/screens/news_page.dart';
+import 'package:project1/features/notification/presentation/screens/notification_page.dart';
+import 'package:project1/features/profile/presentation/screens/profile_page.dart';
+import 'package:project1/features/auth/presentation/screens/register_page.dart';
+import 'package:project1/features/search/presentation/screens/search_page.dart';
 
 void main() {
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
