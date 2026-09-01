@@ -36,7 +36,7 @@ class _RegisterpageState extends State<Registerpage> {
               const SizedBox(height: 32),
               // Title
               Text(
-                "Welcome Back!",
+                "Create your first account!",
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
@@ -132,7 +132,7 @@ class _RegisterpageState extends State<Registerpage> {
               // Sign In Button
               ElevatedButton(
                 onPressed: () {},
-                child: const Text("Sign In"),
+                child: const Text("Sign Up"),
               ),
               const SizedBox(height: 30),
               // Sign Up
@@ -153,7 +153,7 @@ class _RegisterpageState extends State<Registerpage> {
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                     child: Text(
-                      "Sign Up",
+                      "Sign In",
                       style: TextStyle(
                         color: Colors.orange.shade700,
                         fontWeight: FontWeight.w600,
