@@ -11,8 +11,11 @@ class Homepage extends StatelessWidget {
       body:  Center(
         child: Column(
           children: [
+            const SizedBox(height: 20),
             Image.asset("assets/images/ChessGame.png"),
+            const SizedBox(height: 20),
             Image.asset("assets/images/NaturaDrops.png"),
+            const SizedBox(height: 20),
             Image.asset("assets/images/Rebites.png")
           ],
           )
