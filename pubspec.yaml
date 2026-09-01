@@ -61,6 +61,7 @@ flutter:
     - assets/images/ChessGame.png
     - assets/images/NaturaDrops.png
     - assets/images/Rebites.png
+    # - assets/images ini kalo mau daftarin semua tapi kalo ga kepake nanti berat
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

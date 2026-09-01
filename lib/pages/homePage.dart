@@ -12,11 +12,11 @@ class Homepage extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 20),
-            Image.asset("assets/images/ChessGame.png"),
+            Image.asset("assets/images/ChessGame.png", width: 350),
             const SizedBox(height: 20),
-            Image.asset("assets/images/NaturaDrops.png"),
+            Image.asset("assets/images/NaturaDrops.png", width: 350),
             const SizedBox(height: 20),
-            Image.asset("assets/images/Rebites.png")
+            Image.asset("assets/images/Rebites.png", width: 350)
           ],
           )
       ),
