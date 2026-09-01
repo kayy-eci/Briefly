@@ -49,6 +49,7 @@ class _LoginpageState extends State<Loginpage> {
                 "Please Sign in to continue",
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: Colors.grey.shade500,
+                      fontSize: 20
                     ),
               ),
               const SizedBox(height: 36),
