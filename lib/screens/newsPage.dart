@@ -5,12 +5,9 @@ class NewsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("News")),
-      backgroundColor: Colors.green[50],
-      body: const Center(
-        child: Text("Halaman News"),
-      ),
+    return Container(
+      color: Colors.green[50],
+      child: const Center(child: Text("Halaman News")),
     );
   }
 }

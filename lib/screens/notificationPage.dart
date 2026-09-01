@@ -5,12 +5,9 @@ class NotificationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Notification")),
-      backgroundColor: Colors.orange[50],
-      body: const Center(
-        child: Text("Halaman Notification"),
-      ),
+    return Container(
+      color: Colors.orange[50],
+      child: const Center(child: Text("Halaman Notification")),
     );
   }
 }

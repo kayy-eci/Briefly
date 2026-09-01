@@ -5,12 +5,9 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Search")),
-      backgroundColor: Colors.yellow[50],
-      body: const Center(
-        child: Text("Halaman Search"),
-      ),
+    return Container(
+      color: Colors.yellow[50],
+      child: const Center(child: Text("Halaman Search")),
     );
   }
 }

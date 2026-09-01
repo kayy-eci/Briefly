@@ -5,20 +5,21 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Home")),
-      backgroundColor: Colors.blue[50],
-      body:  Center(
+    // TIDAK pakai Scaffold lagi, karena sudah ada di MainNavigation.
+    // Jika pakai Scaffold di sini, BottomBar jadi tertutup / tidak konsisten.
+    return Container(
+      color: Colors.blue[50],
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
-            const SizedBox(height: 20),
             Image.asset("assets/images/ChessGame.png", width: 350),
             const SizedBox(height: 20),
             Image.asset("assets/images/NaturaDrops.png", width: 350),
             const SizedBox(height: 20),
-            Image.asset("assets/images/Rebites.png", width: 350)
+            Image.asset("assets/images/Rebites.png", width: 350),
           ],
-          )
+        ),
       ),
     );
   }

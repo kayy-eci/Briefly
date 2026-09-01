@@ -8,8 +8,8 @@ class Registerpage extends StatefulWidget {
 }
 
 class _RegisterpageState extends State<Registerpage> {
-  bool hidePw = true;
-  bool rememberMe= false;
+  bool _hidePw = true;
+  bool _rememberMe = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +19,8 @@ class _RegisterpageState extends State<Registerpage> {
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 28),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 40),
-              // Logo
               ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: Image.network(
@@ -33,7 +31,6 @@ class _RegisterpageState extends State<Registerpage> {
                 ),
               ),
               const SizedBox(height: 32),
-              // Title
               Text(
                 "Create your first account!",
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -42,122 +39,89 @@ class _RegisterpageState extends State<Registerpage> {
                     ),
               ),
               const SizedBox(height: 8),
-              Text(
-                "Please Sign up to continue",
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: Colors.grey.shade500,
-                    ),
-              ),
+              Text("Please Sign up to continue",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium
+                      ?.copyWith(color: Colors.grey.shade500)),
               const SizedBox(height: 36),
-              // Username
-              TextField(
-                keyboardType: TextInputType.text,
-                decoration: const InputDecoration(
+              const TextField(
+                decoration: InputDecoration(
                   labelText: "Username",
                   hintText: "Masukan Username",
                   prefixIcon: Icon(Icons.person_outline_rounded),
                 ),
               ),
               const SizedBox(height: 18),
-              
-              TextField(
-                keyboardType: TextInputType.text,
-                decoration: const InputDecoration(
+              const TextField(
+                decoration: InputDecoration(
                   labelText: "Email",
                   hintText: "Masukan Email",
                   prefixIcon: Icon(Icons.mail),
                 ),
               ),
               const SizedBox(height: 18),
-              // Password
               TextField(
-                obscureText: hidePw
-            ,
+                obscureText: _hidePw,
                 decoration: InputDecoration(
                   labelText: "Password",
                   hintText: "Masukan Password",
                   prefixIcon: const Icon(Icons.lock_outline_rounded),
                   suffixIcon: IconButton(
-                    icon: Icon(
-                      hidePw
-                          ? Icons.visibility_off_outlined
-                          : Icons.visibility_outlined,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        hidePw
-                     = !hidePw
-                    ;
-                      });
-                    },
+                    icon: Icon(_hidePw
+                        ? Icons.visibility_off_outlined
+                        : Icons.visibility_outlined),
+                    onPressed: () => setState(() => _hidePw = !_hidePw),
                   ),
                 ),
               ),
               const SizedBox(height: 8),
-              // Remember me & Forgot password
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
                       Checkbox(
-                        value: rememberMe,
-                        onChanged: (val) {
-                          setState(() {
-                            rememberMe= val ?? false;
-                          });
-                        },
+                        value: _rememberMe,
                         activeColor: Colors.orange,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4),
-                        ),
+                            borderRadius: BorderRadius.circular(4)),
+                        onChanged: (v) => setState(() => _rememberMe = v ?? false),
                       ),
-                      Text(
-                        "Remember me",
-                        style: TextStyle(color: Colors.grey.shade600),
-                      ),
+                      Text("Remember me",
+                          style: TextStyle(color: Colors.grey.shade600)),
                     ],
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
-                      "Forgot Password?",
-                      style: TextStyle(color: Colors.orange.shade700),
-                    ),
+                    child: Text("Forgot Password?",
+                        style: TextStyle(color: Colors.orange.shade700)),
                   ),
                 ],
               ),
               const SizedBox(height: 24),
-              // Sign In Button
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Navigator.pushReplacementNamed(context, "/main"),
                 child: const Text("Sign Up"),
               ),
               const SizedBox(height: 30),
-              // Sign Up
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Already have an account? ",
-                    style: TextStyle(color: Colors.grey.shade500),
-                  ),
+                  Text("Already have an account? ",
+                      style: TextStyle(color: Colors.grey.shade500)),
                   TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/login");
-                    },
+                    onPressed: () =>
+                        Navigator.pushReplacementNamed(context, "/login"),
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                       minimumSize: Size.zero,
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
-                    child: Text(
-                      "Sign In",
-                      style: TextStyle(
-                        color: Colors.orange.shade700,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    child: Text("Sign In",
+                        style: TextStyle(
+                            color: Colors.orange.shade700,
+                            fontWeight: FontWeight.w600)),
                   ),
                 ],
               ),
